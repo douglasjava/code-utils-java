@@ -6,8 +6,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ResourceHelper {
+	
+	public static void main(String[] args) {
+		getAbsoluteFilePath("TEste.txt");
+	}
 
     public static String getAbsoluteFilePath(String filename) {
+    	
+    	
+    	
         URL resource = ClassLoader.getSystemClassLoader().getResource(filename);
         if (resource == null) {
             throw new IllegalArgumentException("File: " + filename + " not found.");

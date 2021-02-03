@@ -93,7 +93,11 @@ public class Sftp {
 			jschSession.setPassword("5ftpN3O2020");
 
 			Properties config = new java.util.Properties();
+
+			// Linha para correção de falha ao conectar em sftp mais novos link https://stackoverflow.com/questions/30077327/jschexception-algorithm-negotiation-fail-diffie-hellman-group14-sha1
+			config.put("kex", "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256");
 			config.put("StrictHostKeyChecking", "no");
+			
 			jschSession.setConfig(config);
 			jschSession.connect(SESSION_TIMEOUT);
 
