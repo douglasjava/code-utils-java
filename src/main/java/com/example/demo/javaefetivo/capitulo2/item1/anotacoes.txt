@@ -1,0 +1,19 @@
+-- Cosidere os métodos static factory em vez dos construtores
+-- O modo tradicional para um classe obter uma instancia é fornecer um construtor público.
+ - poém existe outra técnica , que é uma classe fornecer um método *static factory*
+ - Vantagens:
+  - O método static possuem nomes e o construtor não, descrevendo categoricamente o objeto que está sendo retornado.
+  - O métodos static factory ao contrario dos construtores, não precisam criar um novo objeto sempre que invocado, premitindo que seja utilizadas instancias 
+    pré-construídas
+ - Desvantagens:
+  - Sem os construtores públicos não podem ser divididas em subclasses
+  - Os programadores costuma não encontra-los 
+ Exemplos:
+ 
+  - from
+  - of
+  - valueOf
+  - instance ou getInstance
+  - create ou newInstance
+  - newType
+  - type

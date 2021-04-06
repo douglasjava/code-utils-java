@@ -1,0 +1,4 @@
+-- Cogite o uso de um builder quando se deparar com muitos parametros no contructor
+-- Podem apresentar diversos parâmetros de varargs
+-- O padrão builder é mais verboso que o padrão do telscoping constructor
+-- Usar Builder somente com classes com 4 uu mais parametros 
