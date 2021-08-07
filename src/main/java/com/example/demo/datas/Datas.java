@@ -1,6 +1,7 @@
 package com.example.demo.datas;
 
 import java.math.BigDecimal;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -25,6 +26,26 @@ public class Datas {
 		String dataAtual = "2021-05-06";
 		
 		LocalDate.parse(dataAtual, DateTimeFormatter.ofPattern(ISO8601_DATE));
+		
+		System.out.println(DayOfWeek.FRIDAY.getValue());
+		
+		var datafim = LocalDate.of(2021, 4, 16);
+		var dataini = datafim.minusDays(4);
+		
+		System.out.println("Data Fim: " + datafim);
+		System.out.println("Data Ini: " + dataini);
+		
+		var dataTeste = LocalDate.now();
+		var dateEpoch = dataTeste.toEpochDay();
+		
+		System.out.println("***********");
+		
+		System.out.println(dataTeste);
+		System.out.println(dataTeste.toEpochDay());
+		System.out.println(LocalDate.ofEpochDay(18763));
+		System.out.println(LocalDate.ofEpochDay(18764));
+		
+		System.out.println("***********");
 
 	}
 

@@ -16,7 +16,7 @@ public class FileRead {
     public static void main(String[] args) throws IOException {
 
         //String fileName = "/home/mkyong/large.txt";
-        String fileName = ResourceHelper.getAbsoluteFilePath("app.log");
+        String fileName = ResourceHelper.getAbsoluteFilePath("D:\\Douglas\\Cursos\\MBA\\PA\\logs-GRPC-ms-pagamento-ms-cliente.txt");
         readFileJava8(fileName);
 
     }
