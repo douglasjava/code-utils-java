@@ -15,18 +15,18 @@ public class Collect02 {
 
 		List<Integer> numeros = List.of(1, 2, 3, 4, 5, 6);
 
-		toList(numeros);
-		toSet(numeros);
-		toCollection(numeros);
+		//toList(numeros);
+		//toSet(numeros);
+		//toCollection(numeros);
 		joining(numeros);
-		averagingInt(numeros);
-		summingInt(numeros);
-		summarizingInt(numeros);
-		count(numeros);
-		maxAndMin(numeros);
-		groupBY(numeros);
-		partitioningBy(numeros);
-		toMap(numeros);
+		//averagingInt(numeros);
+		//summingInt(numeros);
+		//summarizingInt(numeros);
+		//count(numeros);
+		//maxAndMin(numeros);
+		//groupBY(numeros);
+		//partitioningBy(numeros);
+		//toMap(numeros);
 	}
 	
 	private static void toList(List<Integer> numeros) {
@@ -71,7 +71,7 @@ public class Collect02 {
 		//join
 				String join = numeros.stream()
 							.map(n -> n.toString())
-							.collect(Collectors.joining("; "));
+							.collect(Collectors.joining("','"));
 				
 				System.out.println(join);
 				
