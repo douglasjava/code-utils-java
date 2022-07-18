@@ -241,6 +241,25 @@
 			<artifactId>weld-se-shaded</artifactId>
 			<version>4.0.2.Final</version>
 		</dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.santuario</groupId>
+			<artifactId>xmlsec</artifactId>
+			<version>1.4.8</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
 
 	</dependencies>
 
