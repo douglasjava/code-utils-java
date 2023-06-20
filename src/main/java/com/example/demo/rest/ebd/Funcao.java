@@ -7,6 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum Funcao {
 
+    Obreiro("1"),
     Diacono("2"),
     Outros("8"),
     Professora("10"),

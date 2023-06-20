@@ -60,7 +60,7 @@ public class ViewRegistro {
 	}
 
 	private static int getQuantidadeRegistros(List<RegistroDiarioDTO> listaRegistroDiario) {
-		return listaRegistroDiario.stream().mapToInt(registro -> registro.getQtItens()).reduce(0, Integer::sum);
+		return listaRegistroDiario.stream().mapToInt(RegistroDiarioDTO::getQtItens).reduce(0, Integer::sum);
 	}
 
 }

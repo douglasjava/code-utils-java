@@ -22,5 +22,6 @@ public class Contribuicao {
     private String categoria_id;
     private String contribuicao;
     private String aceite_termo;
+    private String denominacao_id;
 
 }
