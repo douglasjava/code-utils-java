@@ -19,11 +19,13 @@ public class Main {
     }
 
     public static final int QTDEPERGUNTAS = 1;
-    public static final String EBDID = "3201";
+    public static final String EBDID = "4121";
 
     public static void main(String[] args) {
 
-        var listMembers = getRemaining();
+        var listMembers = getListMembersColorado();
+        listMembers.addAll(getListMembersPalmares());
+        listMembers.addAll(getOthers());
 
         System.out.println("Enviando respostas EBD: " + EBDID + " para " + listMembers.size() + " membros");
 
@@ -42,9 +44,19 @@ public class Main {
 
     }
 
-    private static List<Membro> getRemaining() {
+    private static List<Membro> getAfter() {
         List<Membro> members = new ArrayList<>();
-        members.add(Membro.builder().nome("ALAIDE ALVES QUIRINO").cpf("02955716677").celular("(31) 99596-6443").email("alaidealves43@hotmail.com").funcao(Funcao.Membro).build());
+
+        members.add(Membro.builder().nome("ESTEVAO SOBRINHO TRINDADE").cpf("11887179607").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+
+        return members;
+    }
+
+    private static List<Membro> getOthers() {
+        List<Membro> members = new ArrayList<>();
+
+        members.add(Membro.builder().nome("DEBORA HELEN FERREIRA DIAS").cpf("15920286679").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+
         return members;
     }
 
@@ -108,8 +120,8 @@ public class Main {
        members.add(Membro.builder().nome("DAVI BUENO DA SILVA FIGUEIREDO").cpf("70189934662").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("ALAIDE DIAS DE ALMEIDA").cpf("66354420653").celular("(31) 99743-6796").email("alaidealmeida22@gmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("SARA ELIAS ALVES QUIRINO").cpf("17015756633").celular("(31) 99663-9313").email("saraquirino@gmail.com").funcao(Funcao.Membro).build());
-       //members.add(Membro.builder().nome("GRACIANE LOURENÇO DE FREITAS").cpf("06026171622").celular("(31) 98400-3537").email("gracianemartins17@gmail.com").funcao(Funcao.Membro).build());
-       //members.add(Membro.builder().nome("WEBETY MAURÍCIO MARTINS").cpf("03293528651").celular("(31) 99337-9406").email("webertymm@gmail.com").funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("GRACIANE LOURENÇO DE FREITAS").cpf("06026171622").celular("(31) 98400-3537").email("gracianemartins17@gmail.com").funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("WEBETY MAURÍCIO MARTINS").cpf("03293528651").celular("(31) 99337-9406").email("webertymm@gmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("SHEYLA FERNANDES DO CARMO").cpf("05919616601").celular("(31) 99554-6254").email("nathi123lu@gmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("NATHALIE ANNE FERNANDES DIETZE").cpf("17147113667").celular("(31) 99554-6254").email("nathi123lu@gmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("GERALDA ANTONIA FERNANDES DO CARMO").cpf("89981464600").celular("(31) 99999-1483").email("ageralda669@gmail.com").funcao(Funcao.Membro).build());
@@ -118,9 +130,9 @@ public class Main {
        members.add(Membro.builder().nome("ELOAH ALLANIS FERNANDES DE SOUSA").cpf("18314196614").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("ALTAMIRO DE CASTRO FILHO").cpf("71155252691").celular("(31) 98025-3532").email("decastrofilhoaltamiro3 @Gmail.co.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("GABRIELA OLIVEIRA RAMOS").cpf("15788896690").celular("(31) 8272-0102").email("gabi.o.ramos2004@gmail.com").funcao(Funcao.Membro).build());
-       //members.add(Membro.builder().nome("MARIA DAS DORES OLIVEIRA RAMOS").cpf("55611613691").celular("(31) 98386-5603").email("mariadas.dorrsoliveira @hotmail.com").funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("MARIA DAS DORES OLIVEIRA RAMOS").cpf("55611613691").celular("(31) 98386-5603").email("mariadas.dorrsoliveira @hotmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("MARIA APARECIDA DIAS RODRIGUES DA SILVA").cpf("87932873649").celular("(31) 98844-7527").email("aparecidadias70@hotmail.com").funcao(Funcao.Membro).build());
-       //members.add(Membro.builder().nome("ALAIDE ALVES QUIRINO").cpf("02955716677").celular("(31) 99596-6443").email("alaidealves43@hotmail.com").funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("ALAIDE ALVES QUIRINO").cpf("02955716677").celular("(31) 99596-6443").email("alaidealves43@hotmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("LENY MARIA DE OLIVEIRA").cpf("02632274648").celular("(31) 98575-9954").email("grazi_viola2009@hotmail.com").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("VANESSA OLIVEIRA FERREIRA").cpf("68904304687").celular("(31) 99201-8170").email("denise.cassia@yahoo.com.br").funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("RANA ZAIRA FERREIRA RODRIGUES").cpf("70391240684").celular("(31) 99225-3666").email("ferreirarana919@gmail.com").funcao(Funcao.Membro).build());
@@ -147,9 +159,18 @@ public class Main {
        members.add(Membro.builder().nome("ROBERTA RODRIGUES DE CAMARGOS SOUZA").cpf("01228141690").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("ADILINA CRISTINA ALVES").cpf("88135993668").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
        members.add(Membro.builder().nome("BENJAMIN ROCHA DOLABELA GOMES").cpf("16104928625").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("DENISE CRISTINA TEIXEIRA DA SILVEIRA").cpf("80962688649").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("RICARDO ANTONIO DA SILVEIRA").cpf("76043975653").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("SAMUEL ELIAS ALVES QUIRINO").cpf("16917264601").celular("(31) 99528-3161").email("samueleliasalves8@gmail.com").funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("RAQUEL OLIVEIRA SILVA").cpf("08953267609").celular("(31) 98341-7989").email("raqueloliveirabio@gmail.com").funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("OLÍVIA DE MALTA OLIVEIRA AUGUSTO").cpf("18281835630").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("LEONARDO ELIAS").cpf("07405860680").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("JESSICA GAMA BARBOSA COELHO").cpf("10901643602").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("FABIO DA SILVA COELHO").cpf("06326239699").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("MARCO TULIO").cpf("06704814671").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
+       members.add(Membro.builder().nome("ESTEVAO SOBRINHO TRINDADE").cpf("11887179607").celular(CELULAR_DEFAULT).email(EMAIL_DEFAULT).funcao(Funcao.Membro).build());
 
-
-        return members;
+       return members;
 
     }
 
@@ -177,36 +198,27 @@ public class Main {
     }
 
     public static String resposta() {
-        String resposta = "TODOS\n" +
-                "1)\t\n" +
-                "A) Eles são as lideranças religiosas que têm, por obrigação, guardar a Palavra e a Doutrina. \n" +
-                "B) Pregam o resultado da Teologia, a partir da razão.\n" +
-                "C) Estão na letra. \n" +
-                "D) Não. Não são fiéis à Doutrina da Palavra, pois pregam o que está na mente deles. \n" +
-                "E) Não, pois pregam letra e razão. \n" +
-                "F) Não. A experiência deles é com a fé racional, que é deles próprios. \n" +
-                "G) Não, pois hoje pregam uma coisa hoje e amanhã pregam outra diferente. \n" +
-                "H) Sim, pois “muitos são chamados.” \n" +
-                "I) Não, pois “poucos são escolhidos.” \n" +
-                "J) Não, porque não vivem em unidade do Espírito Santo.\n" +
+        String resposta = "1) Resposta: Significado profético. \n" +
+                "A) Cantares 1:6 – A igreja ficou responsável por cuidar da herança. \n" +
+                "B) Cantares 1:15 – a igreja que vê com o olhar do Espírito Santo. \n" +
+                "C) Cantares 2:2 – A igreja em santificação. \n" +
+                "D) Cantares 2:12 – a voz do Espírito Santo. \n" +
+                "E) Cantares 2:13 – O perfume dos dons espirituais na igreja.\n" +
                 "\n" +
-                "2)\t\n" +
-                "A) Teólogos (X) Trocaram a revelação pela teologia que é racional. \n" +
-                "B) Pastores (X) Aqueles que apascentam o rebanho apenas por interesse. \n" +
-                "C) Filósofos (X) Introduziram princípios filosóficos na fé. \n" +
-                "D) Ideólogos (X) Criaram uma fé ideológica, oriunda da teologia e filosofia. \n" +
-                "E) Religiosos (X) Atos de religiosidade em lugar de atos de fé. \n" +
-                "F) Ateus – A esses não lhes foi confiado guardar a vinha. \n" +
-                "G) Igreja Fiel – aquela que guardou a vinha fielmente\n" +
+                "2) Resposta: significado profético. \n" +
+                "A) Cantares 1:13 – Sofrimento da igreja por confessar a Jesus. \n" +
+                "B) Cantares 1:14 – A operação do Espírito Santo na igreja gentílica. \n" +
+                "C) Cantares 2:1 – o sangue de Jesus, o Seu Espírito Santo. \n" +
+                "D) Cantares 2:3 – Jesus é único alimento para a igreja fiel. \n" +
+                "E) Cantares 2:9 e 17– A pressa do Noivo em arrebatar a igreja fiel.\n" +
                 "\n" +
-                "3)\t\n" +
-                "-Cantares 1:6 - A liderança de uma igreja que não guardou a vinha, não guardou o Projeto nem vive a Doutrina da Palavra e, por isso, se tornou igreja infiel. \n" +
-                "-Cantares 3:3 - Aqueles que estão “rondando a cidade”, dispersos e longe do Amado (Jesus). Vivem de religião, mas sem a direção do Espírito Santo, tanto que a Noiva (Igreja), quando se afasta deles (v. 4), encontra o Amado (Jesus). \n" +
-                "-Cantares 5:7 - As lideranças religiosas que não foram arrebatados com a Igreja Fiel.\n" +
+                "3) Resposta: \n" +
+                "A) A voz do Espírito Santo. \n" +
+                "B) Ouvida na igreja fiel.\t\n" +
                 "\n" +
-                "PARA CRIANÇAS, INTERMEDIÁRIOS E ADOLESCENTES\n" +
-                "4) A igreja infiel não se preparou para o dia da volta do Senhor. O Senhor virá, em um dia em que ela não o espera. \n" +
-                "Lucas 12:46 - “Virá o senhor daquele servo no dia em que o não espera, e numa hora que ele não sabe, e separá-lo-á, e lhe dará a sua parte com os infiéis.”";
+                "4) Resposta: \n" +
+                "A) Os dons espirituais. \n" +
+                "B) A igreja fiel ouve a voz do Amado.";
         return resposta;
     }
 
